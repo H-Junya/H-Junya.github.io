@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>未来枕席 - 3D定制颈椎枕内测计划</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --neon-blue: #4f46e5;
+            --cyber-purple: #8b5cf6;
+        }
+
+        body {
+            margin: 0;
+            background: #0f172a;
+            font-family: 'Segoe UI', sans-serif;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero {
+            position: relative;
+            padding: 4rem 0;
+            background: var(--primary-gradient);
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        }
+
+        .cyber-border {
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            background: repeating-linear-gradient(45deg,
+                transparent,
+                transparent 10px,
+                var(--neon-blue) 10px,
+                var(--neon-blue) 20px
+            );
+        }
+
+        .title {
+            font-size: 4rem;
+            text-shadow: 0 0 20px rgba(79, 70, 229, 0.5);
+            animation: titleGlow 2s ease-in-out infinite alternate;
+        }
+
+        .badge {
+            background: var(--neon-blue);
+            padding: 0.5rem 1.5rem;
+            border-radius: 999px;
+            transform: rotate(-5deg);
+            display: inline-block;
+            box-shadow: 0 0 15px rgba(79, 70, 229, 0.5);
+        }
+
+        .process-timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            padding: 3rem 0;
+        }
+
+        .process-step {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 1rem;
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .process-step:hover {
+            transform: translateY(-10px);
+        }
+
+        .price-tag {
+            font-size: 3rem;
+            background: linear-gradient(45deg, #00ff87, #60efff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 10px rgba(96, 239, 255, 0.5));
+        }
+
+        @keyframes titleGlow {
+            from { text-shadow: 0 0 10px rgba(79, 70, 229, 0.3); }
+            to { text-shadow: 0 0 30px rgba(79, 70, 229, 0.7); }
+        }
+
+        .holographic-effect {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .holographic-effect::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg,
+                transparent 25%,
+                rgba(255,255,255,0.1) 50%,
+                transparent 75%
+            );
+            animation: hologram 4s infinite linear;
+            pointer-events: none;
+        }
+
+        @keyframes hologram {
+            0% { transform: translate(0,0) rotate(0deg); }
+            100% { transform: translate(100%,100%) rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero holographic-effect">
+        <div class="container">
+            <div class="badge">仅限10席</div>
+            <h1 class="title">未来枕席</h1>
+            <h2>3D生物力学颈椎枕内测计划</h2>
+            
+            <div class="price-tag">￥899</div>
+            <p>材料成本价体验未来科技</p>
+        </div>
+        <div class="cyber-border"></div>
+    </div>
+
+    <div class="container">
+        <div class="process-timeline">
+            <div class="process-step">
+                <i class="fas fa-money-bill-wave fa-2x"></i>
+                <h3>定金预约</h3>
+                <p>支付200元定金锁定席位</p>
+            </div>
+            <div class="process-step">
+                <i class="fas fa-ruler-combined fa-2x"></i>
+                <h3>精准测量</h3>
+                <p>定制测量套件+AI建模指导</p>
+            </div>
+            <div class="process-step">
+                <i class="fas fa-cube fa-2x"></i>
+                <h3>晶格生成</h3>
+                <p>生物力学支撑结构可视化确认</p>
+            </div>
+            <div class="process-step">
+                <i class="fas fa-shipping-fast fa-2x"></i>
+                <h3>专属交付</h3>
+                <p>抗菌枕套+定制包装</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; padding: 4rem 0">
+            <button style="
+                background: var(--primary-gradient);
+                padding: 1rem 3rem;
+                border: none;
+                border-radius: 50px;
+                color: white;
+                font-size: 1.2rem;
+                cursor: pointer;
+                transition: transform 0.3s ease;
+            ">
+                立即预定未来睡眠
+            </button>
+            <p style="margin-top: 1rem; opacity: 0.8">内测通道开放至：2023-12-31</p>
+        </div>
+    </div>
+</body>
+</html>
