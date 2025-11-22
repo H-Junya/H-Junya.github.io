@@ -1,15 +1,19 @@
 export enum Category {
-  ARCHITECTURE = 'ARCHITECTURE',
-  MICRO_CONSTRUCTION = 'MICRO_CONSTRUCTION', // 微筑
+  ARCHITECTURE = 'Architectural Works',
+  MICRO_CONSTRUCTION = 'Micro-Construction Works'
 }
 
-export interface Project {
+export interface Work {
   id: string;
   title: string;
-  year: string;
   category: Category;
+  description: string;
   imageUrl: string;
-  description?: string;
+  date: string;
 }
 
-export type FilterType = Category | 'ALL';
+export interface ReadmeData {
+  markdown: string;
+  isLoading: boolean;
+  error: string | null;
+}

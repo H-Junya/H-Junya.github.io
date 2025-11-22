@@ -1,5 +1,5 @@
 {
-  "name": "JunyaHuang Portfolio",
-  "description": "A minimalist personal portfolio website inspired by generative design aesthetics, featuring Architecture and Micro-Architecture categories with content management capabilities.",
+  "name": "JunyaHuang Portfolio Generator",
+  "description": "A minimalist, generative design-inspired portfolio builder for Architectural and Micro-Construction works, featuring AI-powered GitHub README generation.",
   "requestFramePermissions": []
 }
